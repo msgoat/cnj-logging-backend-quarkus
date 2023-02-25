@@ -7,7 +7,7 @@ Cloud native Quarkus backend with support of cluster logging using an EFK stack:
 
 ## Status
 
-![Build status](https://drone.cloudtrain.aws.msgoat.eu/api/badges/msgoat/cnj-logging-backend-quarkus/status.svg)
+![Build status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiN2FHN1daY05KUjNEbUgvSXdMUmd3YnZscVNCUklGU2xqeWVjSFBFOWZiZ1NMSFBOSHg2ZVNuVHFmeW5PWlVuN1hFUTNDQkVma1NLbzRESklPeTFIRkdVPSIsIml2UGFyYW1ldGVyU3BlYyI6IjFZS1VaM21xbCtLN0gvYlIiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 ## Release information
 

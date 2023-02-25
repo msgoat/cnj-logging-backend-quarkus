@@ -100,7 +100,7 @@ persistence:
     host: cnj-logging-resources-postgresql
     port: 5432
     secret:
-      name: cnj-logging-resources-postgres
+      name: cnj-logging-resources-pg
       keys:
-        user: postgresql-user
-        password: postgresql-password
+        username: user
+        password: password

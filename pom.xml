@@ -8,14 +8,14 @@
     <description>Cloud native Java backend based on Quarkus using JSON logging format</description>
     <properties>
         <!-- new Maven version management -->
-        <revision>1.2.0</revision>
+        <revision>1.3.0</revision>
         <sha1></sha1>
         <changelist></changelist>
         <!-- common properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- runtime related properties -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <jakartaee.version>9.1.0</jakartaee.version>
         <quarkus.version>2.7.2.Final</quarkus.version>
         <quarkus.package.type>uber-jar</quarkus.package.type>
@@ -60,7 +60,7 @@
         <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
         <maven.quarkus.plugin.version>${quarkus.version}</maven.quarkus.plugin.version>
         <!-- pinning versions of cloud native specific maven plugins -->
-        <maven.compose.plugin.version>3.0.0</maven.compose.plugin.version>
+        <maven.compose.plugin.version>4.0.0</maven.compose.plugin.version>
         <maven.docker.plugin.version>0.37.0</maven.docker.plugin.version>
         <maven.helm.plugin.version>4.0.0</maven.helm.plugin.version>
         <!-- quality assurance properties -->
@@ -204,13 +204,13 @@
         <dependency>
             <groupId>group.msg.at.cloud.common</groupId>
             <artifactId>cnj-common-test-core</artifactId>
-            <version>0.8.0</version>
+            <version>1.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>group.msg.at.cloud.common</groupId>
             <artifactId>cnj-common-test-javax</artifactId>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
             <scope>test</scope>
         </dependency>
         <!-- need to added this JCL over SL4J bridge since Apache HTTP Client used by RestAssured is using commons-logging -->
