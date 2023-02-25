@@ -21,7 +21,7 @@ services:
   downstream:
     image: docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-logging-downstream:latest
     environment:
-      DOCKER_JAVA_OPTS: -Xms2g -Xmx2g
+      DOCKER_JAVA_OPTS: "-Xms1g -Xmx1g"
       SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: https://oidc.cloudtrain.aws.msgoat.eu/auth/realms/cloudtrain/protocol/openid-connect/certs
       SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: https://oidc.cloudtrain.aws.msgoat.eu/auth/realms/cloudtrain
       CONSOLE_LOG_PATTERN: "%d{yyyy-MM-dd'T'HH:mm:ss.SSS} %5p --- [%15.15t] %-40.40logger{39} : [%X{userId}] [%X{traceId}] %m%n%wEx"
@@ -32,7 +32,7 @@ services:
       - "38080:8080"
     environment:
       QUARKUS_PROFILE: dev
-      DOCKER_JAVA_OPTS: -Xms2g -Xmx2g
+      DOCKER_JAVA_OPTS: "-Xms1g -Xmx1g"
       MP_JWT_VERIFY_PUBLICKEY_LOCATION: "https://oidc.cloudtrain.aws.msgoat.eu/auth/realms/cloudtrain/protocol/openid-connect/certs"
       MP_JWT_VERIFY_ISSUER: "https://oidc.cloudtrain.aws.msgoat.eu/auth/realms/cloudtrain"
       CLOUDTRAIN_COMMON_REST_TRACE_ENABLED: "true"
