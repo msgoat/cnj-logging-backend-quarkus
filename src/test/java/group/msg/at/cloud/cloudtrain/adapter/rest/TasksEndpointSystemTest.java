@@ -5,14 +5,14 @@ import group.msg.at.cloud.common.test.rest.RestAssuredSystemTestFixture;
 import io.restassured.http.ContentType;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
+import jakarta.json.Json;
+import jakarta.json.JsonArray;
+import jakarta.json.JsonObject;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * System test that verifies that the REST endpoint works as expected.
@@ -52,9 +51,9 @@ public class TasksEndpointSystemTest {
             try {
                 given().auth().oauth2(fixture.getAccessToken()).delete(current).then().assertThat().statusCode(204);
             } catch (AssertionError ex) {
-                System.err.println(String.format("failed to delete task at [%s]: got unexpected status code: %s", current, ex.getMessage()));
+                System.err.printf("failed to delete task at [%s]: got unexpected status code: %s%n", current, ex.getMessage());
             } catch (Exception ex) {
-                System.err.println(String.format("failed to delete task at [%s]: got unexpected exception: %s", current, ex.getMessage()));
+                System.err.printf("failed to delete task at [%s]: got unexpected exception: %s%n", current, ex.getMessage());
             }
         }
     }

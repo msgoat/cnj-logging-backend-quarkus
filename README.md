@@ -40,42 +40,29 @@ a profiled configuration property to your application.properties file:
 Now if you activate profile __dev__, JSON logging will be switched off, although the JSON logging extension has been added to your application.
 
 > Quarkus profiles are activated by adding an envvar `QUARKUS_PROFILE` with the name of the profile to activate to your Docker container configuration.
->
 
+## HOW-TO build this application locally
 
-## Build this application 
+If all prerequisites are met, just run the following Maven command in the project folder:
 
-``` 
+```shell 
 mvn clean verify -P pre-commit-stage
 ```
 
-Build results: a Docker image containing a Quarkus application.
+Build results: a Docker image containing a Spring Boot application.
 
-## Exposed REST endpoints
+## HOW-TO run this showcase locally
 
-Simply call the OpenAPI REST endpoint at `/openapi` to get an OpenAPI compliant API specification.
+In order to run the whole showcase locally, just run the following docker commands in the project folder:
 
-## Exposed environment variables
+```shell 
+docker compose up -d
+docker compose logs -f 
+```
+The showcase application will be accessible via `http://localhost:38090`.
 
-| Name | Required | Description |
-| --- | --- | --- |
-| MP_JWT_VERIFY_PUBLICKEY_LOCATION | x | REST endpoint of an OpenID Connect authentication provider returning the JWT key set |
-| MP_JWT_VERIFY_ISSUER | x | ID of the JWT's issuer |
-| CLOUDTRAIN_SERVICES_GRANTEDPERMISSIONS_MP_REST_URL | x | Base URL of downstream service |
-| POSTGRES_DB_USER | x | PostgreSQL database user | 
-| POSTGRES_DB_PASSWORD | x | PostgreSQL database user |
-| POSTGRES_DB_NAME | x | PostgreSQL database name |
-| POSTGRES_DB_HOST | x | PostgreSQL hostname |
-| POSTGRES_DB_PORT | x | PostgreSQL port number |
+Press `Ctlr+c` to stop tailing the container logs and run the following docker command to stop the show case:
 
-## Exposed Ports
-
-| Port | Protocol | Description |
-| --- | --- | --- |
-| 8080 | HTTP | HTTP endpoint of this application | 
- 
-## Version / Tags
-
-| Tag(s) | Remarks |
-| --- | --- |
-| latest, 1.0.0 | first release |
+```shell 
+docker compose down
+```
