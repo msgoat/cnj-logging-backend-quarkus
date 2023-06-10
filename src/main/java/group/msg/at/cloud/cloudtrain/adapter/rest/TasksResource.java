@@ -6,6 +6,8 @@ import group.msg.at.cloud.common.rest.uri.RouterAwareUriBuilderFactory;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 
 import java.net.URI;
 import java.util.List;

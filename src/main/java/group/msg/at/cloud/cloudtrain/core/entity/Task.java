@@ -1,6 +1,7 @@
 package group.msg.at.cloud.cloudtrain.core.entity;
 
 import group.msg.at.cloud.common.persistence.jpa.audit.AbstractAuditableEntity;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
